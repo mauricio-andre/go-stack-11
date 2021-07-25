@@ -1,5 +1,5 @@
 const express = require('express');
-const { v4: uuid } = require('uuid');
+const { v4: uuid, validate } = require('uuid');
 
 const app = express();
 
@@ -7,11 +7,36 @@ app.use(express.json());
 
 const projects = [];
 
+function logRequest(request, response, next) {
+  const { method, url } = request;
+
+  const logLabel = `[${method.toUpperCase()}] ${url}`;
+
+  console.time(logLabel);
+
+  next();
+
+  console.timeEnd(logLabel);
+}
+
+function validateProjectId(request, response, next) {
+  const { id } = request.params;
+
+  if (!validate(id)) {
+    return response.status(400).json({ error: 'Invalid project ID.' });
+  }
+
+  return next();
+}
+
+app.use(logRequest);
+app.use('project/:id', validateProjectId);
+
 app.get('/projects', (request, response) => {
   const { title } = request.query;
 
   const result = title
-    ? projects.filter(project => project.title.includes(title))
+    ? projects.filter((project) => project.title.includes(title))
     : projects;
 
   return response.json(result);
@@ -31,7 +56,7 @@ app.put('/projects/:id', (request, response) => {
   const { id } = request.params;
   const { title, owner } = request.body;
 
-  const projectIndex = projects.findIndex(project => project.id === id);
+  const projectIndex = projects.findIndex((project) => project.id === id);
 
   if (projectIndex < 0) {
     return response.status(400).json({ error: 'Project not found' });
@@ -47,7 +72,7 @@ app.put('/projects/:id', (request, response) => {
 app.delete('/projects/:id', (request, response) => {
   const { id } = request.params;
 
-  const projectIndex = projects.findIndex(project => project.id === id);
+  const projectIndex = projects.findIndex((project) => project.id === id);
 
   if (projectIndex < 0) {
     return response.status(400).json({ error: 'Project not found' });
