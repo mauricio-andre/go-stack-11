@@ -1,0 +1,4 @@
+@host = http://localhost:3333
+
+### Get projetcs
+GET {{host}}/projects HTTP/1.1
