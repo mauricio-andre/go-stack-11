@@ -1,4 +1,23 @@
 @host = http://localhost:3333
 
-### Get projetcs
+### List all projetcs
 GET {{host}}/projects HTTP/1.1
+
+### Create project
+POST {{host}}/projects HTTP/1.1
+Content-Type: "application/json"
+
+{
+  "name": "Projeto A"
+}
+
+### Alter project
+PUT {{host}}/projects/0 HTTP/1.1
+Content-Type: "application/json"
+
+{
+  "name": "Prjeto B"
+}
+
+### Delete project
+DELETE {{host}}/projects/0 HTTP/1.1
