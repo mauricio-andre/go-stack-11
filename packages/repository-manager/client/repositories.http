@@ -1,0 +1,31 @@
+@host = http://localhost:3333/repositories
+
+### List all repositories
+# query params title
+GET {{host}} HTTP/1.1
+
+### Create repository
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Projeto A",
+  "url": "https://github.com/exemplo",
+  "techs": [ "node", "react" ]
+}
+
+### Alter repository
+PUT {{host}}/5d16022a-426d-4f73-a63f-1964a49b2605 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Projeto B",
+  "url": "https://github.com/exemplo",
+  "techs": [ "node", "react native" ]
+}
+
+### Delete repository
+DELETE {{host}}/5d16022a-426d-4f73-a63f-1964a49b2605 HTTP/1.1
+
+### Create repository like
+POST {{host}}/ebb399f9-4c8f-436f-9980-5c1e2bd90390/like HTTP/1.1
