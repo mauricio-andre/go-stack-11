@@ -19,11 +19,11 @@
 Este é um projeto Node simples que implementa uma API REST, as rotas desta API permitem a manipulação de um array de dados que armazena repositórios e alguns dados do mesmo.
 
 ## Testando a API
-Os testes para as rotas desta API podem ser realizado por meio de qualquer ferramenta que teste rotas de uma API REST. Dentro da pasta [client](./client) deste projeto você encontrará esquemas de requisição http que podem ser enviados diretamente por meio de sua IDE, se você estiver usando VS Code, instale a extensão *REST Client* para fazer uso deste recurso.
+Este projeto contem testes automatizados de suas rotas, para executar esses testes execute o comando `yarn test` após instalar as dependências do mesmo.
+
+Os testes para as rotas desta API podem ser realizados manualmente por meio de qualquer ferramenta que teste rotas de uma API REST. Dentro da pasta [client](./client) deste projeto você encontrará esquemas de requisição http que podem ser enviados diretamente por meio de sua IDE, se você estiver usando VS Code, instale a extensão *REST Client* para fazer uso deste recurso.
 
 ## Execução
 Para executar este projeto acesse o diretório do mesmo por meio do terminal e execute os comandos abaixo:
 - `yarn install`
 - `yarn dev`
-
-Este projeto contem testes automatizados de suas rotas, para executar estes testes execute o comando `yarn test`.
