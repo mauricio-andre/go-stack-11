@@ -1,5 +1,5 @@
 <h1 align="center">
-  FIRST-API
+  PROJECTS-MANAGER-BACKEND
 </h1>
 
 <p align="center">

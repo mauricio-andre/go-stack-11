@@ -24,7 +24,7 @@ As atividades incluídas aqui correspondem aos projetos de exemplos desenvolvido
 <br />
 
 ### Organização do material
-No momento os projetos armazenados neste repositório não estão estruturados em um modelo de monorepo, cada projeto é estritamente independente e não compartilha dependências uns com os outros.
+No momento os projetos armazenados neste repositório não estão estruturados em um modelo de monorepo, esses não compartilha dependências uns com os outros, embora um projeto possa ser necessário para a execução de outro; Em um modulo ou desafio construimos uma api, em outro construimos um projeto front-end que consome a api anterior, essa situação será sempre documentada no arquivo README.md de cada projeto.
 
 Os projetos desenvolvidos estão disponíveis dentro do diretório [packages](./packages) e recebem o nome que foi proposto na aula ou desafio. Nos arquivos README de cada projeto você encontrará uma descrição que lhe informará a origem do mesmo, também haverá instruções para à sua execução, os projetos frutos de desafios possuem um diretório chamado *_instruction*, este diretório possui uma cópia das instruções que foram fornecidas para a elaboração dos mesmos.
 
@@ -33,9 +33,9 @@ Os projetos desenvolvidos estão disponíveis dentro do diretório [packages](./
 ### Índice dos projetos
 Abaixo estão listados os nomes de todos os projetos, uma breve descrição sobre os mesmos e um link para acessar seu local de origem.
 
-* [schedule](./packages/schedule) Desafio 1: Organizando seus estudos. Criação de uma agenda de estudos para manter o foco e o ritmo de aprendizado.
-* [first-api:](./packages/first-api) Modulo: Back-end com Node.Js. Primeira aplicação node desenvolvida, manipula uma lista de projetos em uma array.
-* [repository-manager:](./packages/repository-manager) Desafio 2: Conceitos do Node.js. Tem o objetivo de construir uma aplicação node que manipula uma lista de repositórios em uma array.
+* [schedule](./packages/schedule) Criação de uma agenda de estudos para manter o foco e o ritmo de aprendizado.
+* [projects-manager:](./packages/projects-manager) Projeto Node e ReactJs que gerência uma lista de projetos.
+* [repository-manager:](./packages/repository-manager) Projeto que manipula uma lista de repositórios em uma array.
 
 <br />
 
