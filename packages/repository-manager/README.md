@@ -5,7 +5,6 @@
 <p align="center">
   <a href="#lista-de-correspondências">Lista de correspondências</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#sobre-o-projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#testando-a-API">Testando a API</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#execução">Execução</a>
 </p>
 
@@ -13,17 +12,11 @@
 <br />
 
 ## Lista de correspondências
-* [Desafio 2: Conceitos do Node.js](./_instruction/Desafio02.md)
+* [Desafio 02: Conceitos do Node.js](./backend)
+* [Desafio 03: Conceitos do ReactJS](./web)
 
 ## Sobre o projeto
-Este é um projeto Node simples que implementa uma API REST, as rotas desta API permitem a manipulação de um array de dados que armazena repositórios e alguns dados do mesmo.
-
-## Testando a API
-Este projeto contem testes automatizados de suas rotas, para executar esses testes execute o comando `yarn test` após instalar as dependências do mesmo.
-
-Os testes para as rotas desta API podem ser realizados manualmente por meio de qualquer ferramenta que teste rotas de uma API REST. Dentro da pasta [client](./client) deste projeto você encontrará esquemas de requisição http que podem ser enviados diretamente por meio de sua IDE, se você estiver usando VS Code, instale a extensão *REST Client* para fazer uso deste recurso.
+Este projeto corresponde a fusão do conteúdo desenvolvido nos desafios 2 e 3 do Bootcamp, esse oferece uma api que manipula uma listagem de um array e um front-end web que consome essa api. Mais informações sobre o funcionamento de cada parte do projeto estão disponíveis nos arquivos README.md do diretório de cada projeto.
 
 ## Execução
-Para executar este projeto acesse o diretório do mesmo por meio do terminal e execute os comandos abaixo:
-- `yarn install`
-- `yarn dev`
+Cada parte do projeto segue um processo de execução diferente, essas instruções estão disponíveis no arquivo README.md do diretório de cada projeto.

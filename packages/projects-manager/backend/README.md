@@ -13,7 +13,7 @@
 <br />
 
 ## Lista de correspondências
-* Modulo 1: Back-end com Node.Js
+* Modulo 01: Back-end com Node.Js
 
 ## Sobre o projeto
 Este é o primeiro projeto Node desenvolvido no Bootcamp. É um projeto simples apenas para testar os conceitos mais básicos do node, um array de valores é acessado por rotas nos modelos de API Rest.

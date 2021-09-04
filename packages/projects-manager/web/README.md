@@ -12,7 +12,7 @@
 <br />
 
 ## Lista de correspondências
-* Modulo 2: Front-end com ReactJs
+* Modulo 02: Front-end com ReactJs
 
 ## Sobre o projeto
 Este é o primeiro projeto ReactJs desenvolvido no Bootcamp. É um projeto simples apenas para testar os conceitos mais básicos do react, o mesmo consome a primeira api desenvolvida no Bootcamp.
