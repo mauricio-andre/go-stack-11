@@ -15,7 +15,7 @@
 * Modulo 02: Front-end com ReactJs
 
 ## Sobre o projeto
-Este é o primeiro projeto ReactJs desenvolvido no Bootcamp. É um projeto simples apenas para testar os conceitos mais básicos do react, o mesmo consome a primeira api desenvolvida no Bootcamp.
+Este é o primeiro projeto ReactJs desenvolvido no Bootcamp. É um projeto simples apenas para testar os conceitos mais básicos do react, o mesmo consome a primeira api desenvolvida, lista, adiciona e remove.
 
 ## Execução
 Para executar este projeto acesse o diretório do mesmo por meio do terminal e execute os comandos abaixo:
