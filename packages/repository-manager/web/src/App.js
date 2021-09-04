@@ -26,8 +26,9 @@ function App() {
     await api.delete(`/repositories/${id}`);
 
     const newRepositories = [...repositories];
-    const indexRepository = repositories
-      .findIndex(repository => repository.id === id);
+    const indexRepository = repositories.findIndex(
+      (repository) => repository.id === id
+    );
 
     newRepositories.splice(indexRepository, 1);
     setRepositories(newRepositories);
