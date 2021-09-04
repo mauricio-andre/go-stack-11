@@ -16,7 +16,7 @@
 * [Desafio 03: Conceitos do ReactJS](./_instruction/Desafio03.md)
 
 ## Sobre o projeto
-Este é um projeto ReactJs simples que implementa uma interface qeu se comunica com uma API REST, os recursos da interface permitem a manipulação de um array de dados que armazena repositórios e alguns dados do mesmo.
+Este é um projeto ReactJs simples que implementa uma interface que se comunica com uma API REST, os recursos da interface permitem a manipulação de um array de dados que armazena repositórios e alguns dados do mesmo.
 
 ## Testando a interface
 Este projeto contem testes automatizados de suas funcionalidades, para executar esses testes execute o comando `yarn test` após instalar as dependências do mesmo.
