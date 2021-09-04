@@ -24,4 +24,4 @@ Este projeto contem testes automatizados de suas funcionalidades, para executar 
 ## Execução
 Para executar este projeto acesse o diretório do mesmo por meio do terminal e execute os comandos abaixo:
 - `yarn install`
-- `yarn dev`
+- `yarn start`
