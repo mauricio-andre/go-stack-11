@@ -36,6 +36,7 @@ Abaixo estão listados os nomes de todos os projetos, uma breve descrição sobr
 * [schedule](./packages/schedule) Criação de uma agenda de estudos para manter o foco e o ritmo de aprendizado.
 * [projects-manager:](./packages/projects-manager) Projeto Node e ReactJs que gerência uma lista de projetos.
 * [repository-manager:](./packages/repository-manager) Projeto que manipula uma lista de repositórios em uma array.
+* [typescript:](./packages/typescript) Projeto simples que demonstra algumas funcionalidade do typescript.
 
 <br />
 
