@@ -1,5 +1,9 @@
 @host = http://localhost:3333/appointments
 
+### Listar agendamentos
+GET {{host}} HTTP/1.1
+
+### Criar agendamento
 POST {{host}} HTTP/1.1
 Content-Type: application/json
 
