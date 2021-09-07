@@ -1,0 +1,15 @@
+@host = http://localhost:3333/transactions
+
+### Get balance
+GET {{host}} HTTP/1.1
+
+### Create transaction
+# type: 'income' | 'outcome'
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Operação",
+  "type": "outcome",
+  "value": 200
+}
