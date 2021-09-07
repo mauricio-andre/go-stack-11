@@ -1,0 +1,9 @@
+@host = http://localhost:3333/appointments
+
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "provider": "Mauricio",
+  "date": "{{$datetime iso8601}}"
+}
