@@ -37,6 +37,7 @@ Abaixo estão listados os nomes de todos os projetos, uma breve descrição sobr
 * [projects-manager:](./packages/projects-manager) Projeto Node e ReactJs que gerência uma lista de projetos.
 * [repository-manager:](./packages/repository-manager) Projeto que manipula uma lista de repositórios em uma array.
 * [typescript:](./packages/typescript) Projeto simples que demonstra algumas funcionalidade do typescript.
+* [gobarber:](./packages/gobarber) Projeto completo backend, frontend e mobile para gerenciar uma barbearia.
 
 <br />
 
