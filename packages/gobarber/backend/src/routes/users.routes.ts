@@ -6,6 +6,8 @@ import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 import uploadConfig from '../config/upload';
 import CreateUserService from '../services/CreateUserService';
 
+import UpdateUserAvatarService from '../services/updateUserAvatarService';
+
 interface UserResponse extends Omit<User, 'password'> {
   password?: string;
 }
@@ -36,7 +38,22 @@ usersRouter.patch(
   ensureAuthenticated,
   upload.single('avatar'),
   async (request, response) => {
-    return response.json({});
+    try {
+      const updateUserAvatar = new UpdateUserAvatarService();
+
+      const user = await updateUserAvatar.execute({
+        userId: request.user.id,
+        avatarFilename: request.file?.filename,
+      });
+
+      const userResponse = { ...user } as UserResponse;
+
+      delete userResponse.password;
+
+      return response.json(userResponse);
+    } catch ({ message }) {
+      return response.status(400).json({ error: message });
+    }
   },
 );
 
