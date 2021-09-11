@@ -14,6 +14,7 @@
 
 ## Lista de correspondências
 * Modulo 05: Primeiro projeto com Node.JS
+* Module 06: Iniciando back-end do app
 
 ## Sobre o projeto
 Está descrição será preenchida ao final da elaboração deste projeto que agrega diversos módulos.
@@ -23,5 +24,7 @@ Os testes para as rotas desta API podem ser realizados por meio de qualquer ferr
 
 ## Execução
 Para executar este projeto acesse o diretório do mesmo por meio do terminal e execute os comandos abaixo:
+- `docker-compose up -d`
 - `yarn install`
+- `yarn typeorm migration:run`
 - `yarn dev:server`

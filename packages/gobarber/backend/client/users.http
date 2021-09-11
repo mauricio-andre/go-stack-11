@@ -23,3 +23,7 @@ Content-Type: image/jpeg
 
 < {{url}}
 --MyBoundary--
+
+
+### Show avata
+GET http://localhost:3333/files/000051487811f0858881-Mauricio.jpeg HTTP/1.1

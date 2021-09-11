@@ -18,6 +18,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'prettier/prettier': 'error',
     'no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_' }],
     '@typescript-eslint/no-use-before-define': ['error'],
     'import/extensions': [
       'error',

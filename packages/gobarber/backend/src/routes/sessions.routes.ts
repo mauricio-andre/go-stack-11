@@ -9,21 +9,17 @@ interface UserResponse extends Omit<User, 'password'> {
 const sessionsRouter = Router();
 
 sessionsRouter.post('/', async (request, response) => {
-  try {
-    const { email, password } = request.body;
+  const { email, password } = request.body;
 
-    const authenticateUser = new AuthenticateUserService();
+  const authenticateUser = new AuthenticateUserService();
 
-    const { user, token } = await authenticateUser.execute({ email, password });
+  const { user, token } = await authenticateUser.execute({ email, password });
 
-    const userResponse = { ...user } as UserResponse;
+  const userResponse = { ...user } as UserResponse;
 
-    delete userResponse.password;
+  delete userResponse.password;
 
-    return response.json({ userResponse, token });
-  } catch ({ message }) {
-    return response.status(400).json({ error: message });
-  }
+  return response.json({ userResponse, token });
 });
 
 export default sessionsRouter;
