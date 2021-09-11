@@ -1,10 +1,12 @@
 @host = http://localhost:3333/appointments
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzEzODQ0ODEsImV4cCI6MTYzMTQ3MDg4MSwic3ViIjoiOGM4NjE4ZTMtZTI3Zi00ZWYzLTkwOGEtY2UwMDFkNTA4YjE2In0.CF0CcDAPw7SAVW3PQI9m2d3nVnKfvbK7tZiEwTtDTnQ
 
 ### Listar agendamentos
 GET {{host}} HTTP/1.1
 
 ### Criar agendamento
 POST {{host}} HTTP/1.1
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
