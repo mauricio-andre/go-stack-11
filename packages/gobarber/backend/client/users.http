@@ -1,4 +1,6 @@
 @host = http://localhost:3333/users
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzEzOTMwNDcsImV4cCI6MTYzMTQ3OTQ0Nywic3ViIjoiOGM4NjE4ZTMtZTI3Zi00ZWYzLTkwOGEtY2UwMDFkNTA4YjE2In0.9xZRE-7opVgujy8CSAgWM3t9VT7W8QawPDU6fL-Qxuc
+@url = ../../../../../../../Downloads/Mauricio.jpeg
 
 ### Criar usuário
 POST {{host}} HTTP/1.1
@@ -9,3 +11,15 @@ Content-Type: application/json
   "email": "exemplo@dominio.com.br",
   "password": "12345678"
 }
+
+### Update avatar
+PATCH {{host}}/avatar HTTP/1.1
+Authorization: Bearer {{token}}
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="avatar"; filename="Mauricio.jpeg"
+Content-Type: image/jpeg
+
+< {{url}}
+--MyBoundary--
