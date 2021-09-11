@@ -14,13 +14,13 @@ sessionsRouter.post('/', async (request, response) => {
 
     const authenticateUser = new AuthenticateUserService();
 
-    const { user } = await authenticateUser.execute({ email, password });
+    const { user, token } = await authenticateUser.execute({ email, password });
 
     const userResponse = { ...user } as UserResponse;
 
     delete userResponse.password;
 
-    return response.json(userResponse);
+    return response.json({ userResponse, token });
   } catch ({ message }) {
     return response.status(400).json({ error: message });
   }
