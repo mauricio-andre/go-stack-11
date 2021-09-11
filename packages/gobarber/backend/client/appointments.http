@@ -8,6 +8,6 @@ POST {{host}} HTTP/1.1
 Content-Type: application/json
 
 {
-  "provider": "Mauricio",
+  "providerId": "2ce8d718-9eab-4a46-8295-9b480bcbb437",
   "date": "{{$datetime iso8601}}"
 }
