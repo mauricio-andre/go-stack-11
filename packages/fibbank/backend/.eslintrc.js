@@ -16,12 +16,14 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'class-methods-use-this': 'off',
     'no-param-reassign': [
       'error',
       { props: true, ignorePropertyModificationsForRegex: ['^_'] },
     ],
     'prettier/prettier': 'error',
     'no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_' }],
     '@typescript-eslint/no-use-before-define': ['error'],
     'import/extensions': [
       'error',
