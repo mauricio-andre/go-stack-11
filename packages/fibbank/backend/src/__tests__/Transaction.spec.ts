@@ -3,8 +3,8 @@ import request from 'supertest';
 import { Connection, getConnection, getRepository } from 'typeorm';
 import app from '../app';
 import createConnection from '../database';
-import Category from '../models/Category';
-import Transaction from '../models/Transaction';
+import Category from '../entities/Category';
+import Transaction from '../entities/Transaction';
 
 let connection: Connection;
 
@@ -134,7 +134,7 @@ describe('Transaction', () => {
       where: {
         title: 'March Salary',
 
-        category_id: category?.id,
+        categoryId: category?.id,
       },
     });
 
@@ -172,7 +172,7 @@ describe('Transaction', () => {
       where: {
         title: 'March Salary',
 
-        category_id: insertedCategoryId,
+        categoryId: insertedCategoryId,
       },
     });
 

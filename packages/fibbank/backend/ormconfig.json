@@ -1,12 +1,16 @@
 {
   "type": "postgres",
   "host": "localhost",
-  "port": 5432,
+  "port": 5434,
   "username": "fibbank",
   "password": "fibbank",
   "database": "fibbank",
-  "entities": ["./src/models/*.ts"],
-  "migrations": ["./src/database/migrations/*.ts"],
+  "entities": [
+    "./src/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
   "cli": {
     "migrationsDir": "./src/database/migrations"
   }
