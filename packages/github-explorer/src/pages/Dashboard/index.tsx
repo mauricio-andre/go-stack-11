@@ -50,7 +50,6 @@ const Dashboard: React.FC = () => {
 
     try {
       const response = await api.get(`repos/${newRepo}`);
-
       const repository: Repository = response.data;
       repository.fullName = response.data.full_name;
       repository.owner.avatarUrl = response.data.owner.avatar_url;
