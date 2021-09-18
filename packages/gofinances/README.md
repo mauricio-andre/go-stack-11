@@ -1,5 +1,5 @@
 <h1 align="center">
-  FIBBANK
+  GOFINANCES
 </h1>
 
 <p align="center">
@@ -10,9 +10,6 @@
 
 ---
 <br />
-
-## Lista de correspondências
-* [Desafio 05: Fundamentos Node.js](./backend)
 
 ## Sobre o projeto
 Está descrição será preenchida ao final da elaboração deste projeto que agrega diversos módulos.

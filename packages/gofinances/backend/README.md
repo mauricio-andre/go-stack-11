@@ -1,5 +1,5 @@
 <h1 align="center">
-  FIBBANK
+  GOFINANCES
 </h1>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 ## Lista de correspondências
 * [Desafio 05: Fundamentos Node.js](./_instruction/Desafio05.md)
-* [Desafio 06: Banco de dados e upload de arquivos no Node.js](./_instruction/Desafio05.md)
+* [Desafio 06: Banco de dados e upload de arquivos no Node.js](./_instruction/Desafio06.md)
 
 ## Sobre o projeto
 Está descrição será preenchida ao final da elaboração deste projeto que agrega diversos desafios.

@@ -14,7 +14,7 @@
 
 ## Lista de correspondências
 * Modulo 05: Primeiro projeto com Node.JS
-* Module 06: Iniciando back-end do app
+* Modulo 06: Iniciando back-end do app
 
 ## Sobre o projeto
 Está descrição será preenchida ao final da elaboração deste projeto que agrega diversos módulos.
