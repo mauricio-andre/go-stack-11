@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   extends: [
     'plugin:react/recommended',
     'airbnb',
@@ -17,7 +18,6 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
     'react-hooks/rules-of-hooks': 'error',
