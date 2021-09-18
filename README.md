@@ -39,6 +39,7 @@ Abaixo estão listados os nomes de todos os projetos, uma breve descrição sobr
 * [typescript:](./packages/typescript) Projeto simples que demonstra algumas funcionalidade do typescript.
 * [gobarber:](./packages/gobarber) Projeto completo backend, frontend e mobile para gerenciar uma barbearia.
 * [fibbank:](./packages/fibbank) Projeto completo backend, frontend e mobile para gerenciar uma barbearia.
+* [github-explorer:](./packages/github-explorer) Apresenta um tela com layout agradável para pesquisar repositórios do gihub e listar suas issues.
 
 <br />
 
