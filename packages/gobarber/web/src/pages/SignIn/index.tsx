@@ -7,6 +7,7 @@ import logoImg from '../../assets/logo.svg';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import { useAuth } from '../../context/AuthContext';
+import { useToast } from '../../context/ToastContext';
 import getValidationsErrors from '../../utils/getValidationsErrors';
 import { Background, Container, Content } from './styles';
 
@@ -18,6 +19,7 @@ interface SigInFormData {
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const { signIn } = useAuth();
+  const { addToast } = useToast();
 
   const handleSubmit = useCallback(
     async (data: SigInFormData) => {
@@ -33,7 +35,7 @@ const SignIn: React.FC = () => {
 
         await schema.validate(data, { abortEarly: false });
 
-        signIn({
+        await signIn({
           email: data.email,
           password: data.password,
         });
@@ -42,9 +44,15 @@ const SignIn: React.FC = () => {
           const erros = getValidationsErrors(error as Yup.ValidationError);
           formRef.current?.setErrors(erros);
         }
+
+        addToast({
+          type: 'error',
+          title: 'Erro na autenticação',
+          description: 'Ocorreu um erro ao fazer login, check as credenciais',
+        });
       }
     },
-    [signIn],
+    [signIn, addToast],
   );
 
   return (
