@@ -19,6 +19,11 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'react/require-default-props': 'off',
+    'react/jsx-no-bind': 'off',
+    'import/prefer-default-export': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'prettier/prettier': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
