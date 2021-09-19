@@ -1,17 +1,24 @@
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useContext, useRef } from 'react';
 import { FiLock, FiLogIn, FiMail } from 'react-icons/fi';
 import * as Yup from 'yup';
 import logoImg from '../../assets/logo.svg';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
+import { AuthContext } from '../../context/AuthContext';
 import getValidationsErrors from '../../utils/getValidationsErrors';
 import { Background, Container, Content } from './styles';
 
+interface SigInFormData {
+  email: string;
+  password: string;
+}
+
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const handleSubmit = useCallback(async (data: any) => {
+  const { signIn } = useContext(AuthContext);
+  const handleSubmit = useCallback(async (data: SigInFormData) => {
     try {
       formRef.current?.setErrors({});
 
@@ -23,6 +30,11 @@ const SignIn: React.FC = () => {
       });
 
       await schema.validate(data, { abortEarly: false });
+
+      signIn({
+        email: data.email,
+        password: data.password,
+      });
     } catch (error) {
       const erros = getValidationsErrors(error as Yup.ValidationError);
       formRef.current?.setErrors(erros);
