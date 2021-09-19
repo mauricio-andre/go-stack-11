@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 import { Container } from './styles';
 
@@ -12,9 +13,12 @@ const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
       <img src={Logo} alt="GoFinances" />
 
       <nav>
-        {
-          // Todo
-        }
+        <NavLink to="/" exact activeClassName="selected">
+          Listagem
+        </NavLink>
+        <NavLink to="/import" exact activeClassName="selected">
+          Importar
+        </NavLink>
       </nav>
     </header>
   </Container>
