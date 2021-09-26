@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 
-const Auth = createNativeStackNavigator();
+const Auth = createNativeStackNavigator<RootStackParamList>();
 
 const AuthRoutes: React.FC = () => {
   return (
