@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import multer from 'multer';
-import uploadConfig from '../config/upload';
-import User from '../entities/User';
-import ensureAuthenticated from '../middlewares/ensureAuthenticated';
-import CreateUserService from '../services/CreateUserService';
-import UpdateUserAvatarService from '../services/updateUserAvatarService';
+import uploadConfig from '@config/upload';
+import User from '@modules/users/infra/typeorm/entities/User';
+import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
+import CreateUserService from '@modules/users/services/CreateUserService';
+import UpdateUserAvatarService from '@modules/users/services/updateUserAvatarService';
 
 interface UserResponse extends Omit<User, 'password'> {
   password?: string;

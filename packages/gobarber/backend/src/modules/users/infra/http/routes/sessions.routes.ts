@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import User from '../entities/User';
-import AuthenticateUserService from '../services/AuthenticateUserService';
+import User from '@modules/users/infra/typeorm/entities/User';
+import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
 
 interface UserResponse extends Omit<User, 'password'> {
   password?: string;
