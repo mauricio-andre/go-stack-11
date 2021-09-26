@@ -26,6 +26,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { MyNavigationProps } from '../../@types/MyNavigationProps';
 import getValidationsErrors from '../../utils/getValidationsErrors';
+import { useAuth } from '../../context/AuthContext';
 
 interface SigInFormData {
   email: string;
@@ -36,38 +37,40 @@ const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const passwordInputRef = useRef<TextInput>(null);
   const navigation = useNavigation<MyNavigationProps>();
+  const { signIn } = useAuth();
 
-  const handleSubmit = useCallback(async (data: SigInFormData) => {
-    try {
-      formRef.current?.setErrors({});
+  const handleSubmit = useCallback(
+    async (data: SigInFormData) => {
+      try {
+        formRef.current?.setErrors({});
 
-      const schema = Yup.object().shape({
-        email: Yup.string()
-          .required('Email obrigatório')
-          .email('Digite um e-mail válido'),
-        password: Yup.string().required('Senha obrigatória'),
-      });
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .required('Email obrigatório')
+            .email('Digite um e-mail válido'),
+          password: Yup.string().required('Senha obrigatória'),
+        });
 
-      await schema.validate(data, { abortEarly: false });
-      // await signIn({
-      //   email: data.email,
-      //   password: data.password,
-      // });
+        await schema.validate(data, { abortEarly: false });
+        await signIn({
+          email: data.email,
+          password: data.password,
+        });
+      } catch (error) {
+        if (error instanceof Yup.ValidationError) {
+          const erros = getValidationsErrors(error as Yup.ValidationError);
+          formRef.current?.setErrors(erros);
+          return;
+        }
 
-      // history.push('/dashboard');
-    } catch (error) {
-      if (error instanceof Yup.ValidationError) {
-        const erros = getValidationsErrors(error as Yup.ValidationError);
-        formRef.current?.setErrors(erros);
-        return;
+        Alert.alert(
+          'Erro na autenticação',
+          'Ocorreu um erro ao fazer login, check as credenciais',
+        );
       }
-
-      Alert.alert(
-        'Erro na autenticação',
-        'Ocorreu um erro ao fazer login, check as credenciais',
-      );
-    }
-  }, []);
+    },
+    [signIn],
+  );
 
   return (
     <>
