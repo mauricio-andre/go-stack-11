@@ -26,6 +26,7 @@ module.exports = {
         },
       },
     ],
+    'no-useless-constructor': 'off',
     'class-methods-use-this': 'off',
     'prettier/prettier': 'error',
     'no-use-before-define': 'off',
