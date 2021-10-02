@@ -6,7 +6,7 @@ import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAut
 import CreateUserService from '@modules/users/services/CreateUserService';
 import UpdateUserAvatarService from '@modules/users/services/updateUserAvatarService';
 
-interface UserResponse extends Omit<User, 'password'> {
+interface IUserResponse extends Omit<User, 'password'> {
   password?: string;
 }
 
@@ -20,7 +20,7 @@ usersRouter.post('/', async (request, response) => {
 
   const user = await createUser.execute({ name, email, password });
 
-  const userResponse = { ...user } as UserResponse;
+  const userResponse = { ...user } as IUserResponse;
 
   delete userResponse.password;
 
@@ -39,7 +39,7 @@ usersRouter.patch(
       avatarFilename: request.file?.filename,
     });
 
-    const userResponse = { ...user } as UserResponse;
+    const userResponse = { ...user } as IUserResponse;
 
     delete userResponse.password;
 

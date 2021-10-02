@@ -2,7 +2,7 @@ import { Router } from 'express';
 import User from '@modules/users/infra/typeorm/entities/User';
 import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
 
-interface UserResponse extends Omit<User, 'password'> {
+interface IUserResponse extends Omit<User, 'password'> {
   password?: string;
 }
 
@@ -15,7 +15,7 @@ sessionsRouter.post('/', async (request, response) => {
 
   const { user, token } = await authenticateUser.execute({ email, password });
 
-  const userResponse = { ...user } as UserResponse;
+  const userResponse = { ...user } as IUserResponse;
 
   delete userResponse.password;
 
