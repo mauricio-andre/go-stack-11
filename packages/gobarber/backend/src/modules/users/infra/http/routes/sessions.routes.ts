@@ -1,23 +1,10 @@
-import User from '@modules/users/infra/typeorm/entities/User';
-import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
 import { Router } from 'express';
-import { container } from 'tsyringe';
+import SessionsController from '../controllers/SessionsController';
 
-interface IUserResponse extends Omit<User, 'password'> {
-  password?: string;
-}
+const sessionsController = new SessionsController();
 
 const sessionsRouter = Router();
 
-sessionsRouter.post('/', async (request, response) => {
-  const { email, password } = request.body;
-  const authenticateUser = container.resolve(AuthenticateUserService);
-  const { user, token } = await authenticateUser.execute({ email, password });
-  const userResponse = { ...user } as IUserResponse;
-
-  delete userResponse.password;
-
-  return response.json({ user: userResponse, token });
-});
+sessionsRouter.post('/', sessionsController.create);
 
 export default sessionsRouter;
