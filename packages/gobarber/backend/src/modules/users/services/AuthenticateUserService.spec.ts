@@ -1,3 +1,4 @@
+import AppError from '@shared/errors/AppError';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import CreateUserService from './CreateUserService';
 import AuthenticateUserService from './AuthenticateUserService';
@@ -32,22 +33,46 @@ describe('AuthenticateUser', () => {
     expect(response.user).toBe(user);
   });
 
-  // it('Should not be able to create a new user with same email from another', async () => {
-  //   const fakeUsersRepository = new FakeUsersRepository();
-  //   const createUser = new CreateUserService(fakeUsersRepository);
+  it('Should not be able to authenticate with not existing user', async () => {
+    const fakeUsersRepository = new FakeUsersRepository();
+    const fakeHashProvider = new FakeHashProvider();
+    const authenticateUser = new AuthenticateUserService(
+      fakeUsersRepository,
+      fakeHashProvider,
+    );
 
-  //   await createUser.execute({
-  //     name: 'john Doe',
-  //     email: 'johnDoe@example.com.br',
-  //     password: '123456',
-  //   });
+    expect(
+      authenticateUser.execute({
+        email: 'johnDoe@example.com.br',
+        password: '123456',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
 
-  //   expect(
-  //     createUser.execute({
-  //       name: 'john Doe',
-  //       email: 'johnDoe@example.com.br',
-  //       password: '123456',
-  //     }),
-  //   ).rejects.toBeInstanceOf(AppError);
-  // });
+  it('Should not be able to authenticate with wrong password', async () => {
+    const fakeUsersRepository = new FakeUsersRepository();
+    const fakeHashProvider = new FakeHashProvider();
+    const createUser = new CreateUserService(
+      fakeUsersRepository,
+      fakeHashProvider,
+    );
+
+    const authenticateUser = new AuthenticateUserService(
+      fakeUsersRepository,
+      fakeHashProvider,
+    );
+
+    await createUser.execute({
+      name: 'john Doe',
+      email: 'johnDoe@example.com.br',
+      password: '123456',
+    });
+
+    expect(
+      authenticateUser.execute({
+        email: 'johnDoe@example.com.br',
+        password: 'wrong-password',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
 });
