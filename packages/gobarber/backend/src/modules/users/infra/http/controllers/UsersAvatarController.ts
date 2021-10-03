@@ -1,4 +1,4 @@
-import updateUserAvatarService from '@modules/users/services/updateUserAvatarService';
+import updateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import User from '../../typeorm/entities/User';
@@ -12,7 +12,7 @@ export default class UsersAvatarController {
     const updateUserAvatar = container.resolve(updateUserAvatarService);
     const user = await updateUserAvatar.execute({
       userId: request.user.id,
-      avatarFilename: request.file?.filename,
+      avatarFilename: request.file?.filename || '',
     });
 
     const userResponse = { ...user } as IUserResponse;
