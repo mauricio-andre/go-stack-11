@@ -34,6 +34,23 @@ describe('UpdateProfile', () => {
     expect(updatedUser.email).toBe('johntre@example.com');
   });
 
+  it('Should be able to update the profile without change the email', async () => {
+    const user = await fakeUsersRepository.create({
+      name: 'john Doe',
+      email: 'johnDoe@example.com.br',
+      password: '123456',
+    });
+
+    const updatedUser = await updateProfileService.execute({
+      userId: user.id,
+      name: 'John Trê',
+      email: 'johnDoe@example.com.br',
+    });
+
+    expect(updatedUser.name).toBe('John Trê');
+    expect(updatedUser.email).toBe('johnDoe@example.com.br');
+  });
+
   it('Should not be able to change to another user email', async () => {
     await fakeUsersRepository.create({
       name: 'John Trê',
@@ -105,6 +122,16 @@ describe('UpdateProfile', () => {
         email: 'johntre@example.com',
         password: '123123',
         oldPassword: 'wrong-old-password',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
+
+  it('Should not be able update the profile from non-existing user', async () => {
+    await expect(
+      updateProfileService.execute({
+        userId: 'non-existing-user-id',
+        name: 'John Trê',
+        email: 'johntre@example.com',
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
