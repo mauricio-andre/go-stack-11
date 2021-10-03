@@ -25,7 +25,7 @@ class ResetPasswordService {
     const userToken = await this.userTokensRepository.findByToken(token);
 
     if (!userToken) {
-      throw new AppError('User token dow not exists');
+      throw new AppError('User token do not exists');
     }
 
     const user = await this.userRepository.findById(userToken.userId);
