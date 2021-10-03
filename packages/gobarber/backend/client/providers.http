@@ -1,0 +1,6 @@
+@host = http://localhost:3333/providers
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzMyODkyNDgsImV4cCI6MTYzMzM3NTY0OCwic3ViIjoiNWE1NDE1ZWQtYTBlMC00ZDczLWIwNzEtYTJiMWM2NDY2ZjNhIn0.YQ3MdGscX-uRYjt8rrhALGyQAEBEABo_4bIOvPd7ito
+
+### Get Profile
+GET {{host}} HTTP/1.1
+Authorization: Bearer {{token}}
