@@ -10,3 +10,8 @@ services:
       POSTGRES_USER: "gobarber"
       POSTGRES_PASSWORD: "gobarber"
       POSTGRES_DB: "gobarber"
+  mongo:
+    container_name: gobarber_mongo
+    image: mongo
+    ports:
+      - 27017:27017
