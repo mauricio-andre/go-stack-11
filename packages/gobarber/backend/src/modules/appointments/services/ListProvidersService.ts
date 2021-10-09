@@ -24,9 +24,9 @@ class ListProvidersService {
       users = await this.userRepository.findAllProviders({
         exceptUserId: userId,
       });
-    }
 
-    await this.cacheProvider.save<User[]>(cacheKey, users);
+      await this.cacheProvider.save<User[]>(cacheKey, users);
+    }
 
     return users;
   }
