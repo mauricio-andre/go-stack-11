@@ -1,6 +1,17 @@
 @host = http://localhost:3333/providers
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzMyODkyNDgsImV4cCI6MTYzMzM3NTY0OCwic3ViIjoiNWE1NDE1ZWQtYTBlMC00ZDczLWIwNzEtYTJiMWM2NDY2ZjNhIn0.YQ3MdGscX-uRYjt8rrhALGyQAEBEABo_4bIOvPd7ito
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzM3ODg5MTUsImV4cCI6MTYzMzg3NTMxNSwic3ViIjoiNWE1NDE1ZWQtYTBlMC00ZDczLWIwNzEtYTJiMWM2NDY2ZjNhIn0.xLpZEvXhgHeYz4efoFmXM_7eXEm6eR3qNJ9e0rSYU6g
+@poviderId = dcb646c4-03a1-40a0-9210-957474b92af6
 
 ### Get Profile
 GET {{host}} HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Get Provider days availability
+# Query params: day, month, year
+GET {{host}}/{{poviderId}}/day-availability?day=9&month=10&year=2021 HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Get Provider month availability
+# Query params: month, year
+GET {{host}}/{{poviderId}}/month-availability?month=10&year=2021 HTTP/1.1
 Authorization: Bearer {{token}}
