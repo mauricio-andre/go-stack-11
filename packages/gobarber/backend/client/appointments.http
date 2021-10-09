@@ -1,8 +1,8 @@
 @host = http://localhost:3333/appointments
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzEzODQ0ODEsImV4cCI6MTYzMTQ3MDg4MSwic3ViIjoiOGM4NjE4ZTMtZTI3Zi00ZWYzLTkwOGEtY2UwMDFkNTA4YjE2In0.CF0CcDAPw7SAVW3PQI9m2d3nVnKfvbK7tZiEwTtDTnQ
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzM3OTE4MTEsImV4cCI6MTYzMzg3ODIxMSwic3ViIjoiNWE1NDE1ZWQtYTBlMC00ZDczLWIwNzEtYTJiMWM2NDY2ZjNhIn0.tPccd2GVmrbdwU1l1V-GVTYPTgewK7AyGpr3-1dIdTA
 
-### Listar agendamentos
-GET {{host}} HTTP/1.1
+### Listar agendamentos do usuário logado
+GET {{host}}/me?day=9&month=10&year=2021 HTTP/1.1
 Authorization: Bearer {{token}}
 
 ### Criar agendamento
@@ -10,7 +10,8 @@ POST {{host}} HTTP/1.1
 Authorization: Bearer {{token}}
 Content-Type: application/json
 
+#"date": "{{$datetime iso8601}}"
 {
-  "providerId": "2ce8d718-9eab-4a46-8295-9b480bcbb437",
-  "date": "{{$datetime iso8601}}"
+  "providerId": "dcb646c4-03a1-40a0-9210-957474b92af6",
+  "date": "2021-10-09T16:00:00.000Z"
 }
