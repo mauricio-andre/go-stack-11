@@ -1,5 +1,5 @@
 @host = http://localhost:3333/profile
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzMyODkyNDgsImV4cCI6MTYzMzM3NTY0OCwic3ViIjoiNWE1NDE1ZWQtYTBlMC00ZDczLWIwNzEtYTJiMWM2NDY2ZjNhIn0.YQ3MdGscX-uRYjt8rrhALGyQAEBEABo_4bIOvPd7ito
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzM4MDU2NDcsImV4cCI6MTYzMzg5MjA0Nywic3ViIjoiNWE1NDE1ZWQtYTBlMC00ZDczLWIwNzEtYTJiMWM2NDY2ZjNhIn0.0axYb4S8Tc4lfEwkW2jnw9X9pWLJPB51BawFIeX4KgA
 
 ### Get Profile
 GET {{host}} HTTP/1.1
@@ -13,6 +13,7 @@ Content-Type: application/json
 {
   "name": "Mauricio",
   "email": "exemplo@dominio.com.br",
-  "password": "12345678",
-  "oldPassword": "12345678"
+  "password": "",
+  "passwordConfirmation": "",
+  "oldPassword": ""
 }
