@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import 'dotenv/config';
 import uploadConfig from '@config/upload';
 import '@shared/container';
 import AppError from '@shared/errors/AppError';
