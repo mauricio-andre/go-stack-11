@@ -1,11 +1,7 @@
 import updateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
+import { classToClass } from 'class-transformer';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
-import User from '../../typeorm/entities/User';
-
-interface IUserResponse extends Omit<User, 'password'> {
-  password?: string;
-}
 
 export default class UsersAvatarController {
   public async update(request: Request, response: Response): Promise<Response> {
@@ -15,10 +11,6 @@ export default class UsersAvatarController {
       avatarFilename: request.file?.filename || '',
     });
 
-    const userResponse = { ...user } as IUserResponse;
-
-    delete userResponse.password;
-
-    return response.json(userResponse);
+    return response.json(classToClass(user));
   }
 }

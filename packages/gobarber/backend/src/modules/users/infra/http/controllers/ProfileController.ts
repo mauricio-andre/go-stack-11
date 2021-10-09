@@ -1,23 +1,16 @@
 import ShowProfileService from '@modules/users/services/ShowProfileService';
 import UpdateProfileService from '@modules/users/services/UpdateProfileService';
+import { classToClass } from 'class-transformer';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
-import User from '../../typeorm/entities/User';
-
-interface IUserResponse extends Omit<User, 'password'> {
-  password?: string;
-}
 
 export default class ProfileController {
   public async show(request: Request, response: Response): Promise<Response> {
     const userId = request.user.id;
     const showProfile = container.resolve(ShowProfileService);
     const user = await showProfile.execute({ userId });
-    const userResponse = { ...user } as IUserResponse;
 
-    delete userResponse.password;
-
-    return response.json(userResponse);
+    return response.json(classToClass(user));
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
@@ -32,10 +25,6 @@ export default class ProfileController {
       oldPassword,
     });
 
-    const userResponse = { ...user } as IUserResponse;
-
-    delete userResponse.password;
-
-    return response.json(userResponse);
+    return response.json(classToClass(user));
   }
 }

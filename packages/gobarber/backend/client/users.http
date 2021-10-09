@@ -1,5 +1,5 @@
 @host = http://localhost:3333/users
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzEzOTMwNDcsImV4cCI6MTYzMTQ3OTQ0Nywic3ViIjoiOGM4NjE4ZTMtZTI3Zi00ZWYzLTkwOGEtY2UwMDFkNTA4YjE2In0.9xZRE-7opVgujy8CSAgWM3t9VT7W8QawPDU6fL-Qxuc
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzM4MDk2NzgsImV4cCI6MTYzMzg5NjA3OCwic3ViIjoiNWE1NDE1ZWQtYTBlMC00ZDczLWIwNzEtYTJiMWM2NDY2ZjNhIn0.AmXMh3ciStlz-lE1YlV2Gve6_HV0hwyojW-ZgfvXyBw
 @url = ../../../../../../../Downloads/Mauricio.jpeg
 
 ### Criar usuário
