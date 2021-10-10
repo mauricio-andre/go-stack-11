@@ -13,6 +13,8 @@ import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProduct
 class Order {
   id: string;
 
+  customerId: string;
+
   customer: Customer;
 
   orderProducts: OrdersProducts[];
