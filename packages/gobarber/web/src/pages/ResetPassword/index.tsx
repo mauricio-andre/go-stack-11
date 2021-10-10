@@ -22,7 +22,12 @@ const ResetPassword: React.FC = () => {
   const history = useHistory();
   const location = useLocation();
   const { addToast } = useToast();
-  const query = new URLSearchParams(location.search);
+  const useQuery = useCallback(
+    () => new URLSearchParams(location.search),
+    [location],
+  );
+
+  const query = useQuery();
 
   const handleSubmit = useCallback(
     async (data: ResetPasswordFormData) => {
