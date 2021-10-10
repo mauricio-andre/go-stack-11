@@ -1,0 +1,23 @@
+@host = http://localhost:3333/orders
+
+### Create a new order
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "customerId": "84e44af0-32cc-48cf-ac12-77f030e5e917",
+  "products": [
+    {
+      "id": "0a6650a0-9df5-4c6a-a137-009ebdef0d54",
+      "quantity": 1
+    },
+    {
+      "id": "574ca20f-f4ed-4ec3-8aec-4a122841da06",
+      "quantity": 2
+    }
+  ]
+}
+
+
+### List Details Order
+GET {{host}}/f04a3d04-6b33-4004-a0cc-0fdfe98b4b20 HTTP/1.1

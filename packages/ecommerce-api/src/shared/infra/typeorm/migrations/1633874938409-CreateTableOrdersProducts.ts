@@ -25,7 +25,7 @@ export default class CreateTableOrdersProducts1633874938409
           },
           {
             name: 'price',
-            type: 'numeric',
+            type: 'decimal(10, 2)',
           },
           {
             name: 'quantity',

@@ -1,0 +1,10 @@
+@host = http://localhost:3333/customers
+
+### Create a new customer
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Mauricio",
+  "email": "mauricio@exemplo.com.br"
+}

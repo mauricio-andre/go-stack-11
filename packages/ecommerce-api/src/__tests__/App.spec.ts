@@ -9,7 +9,7 @@ let connection: Connection;
 describe('App', () => {
   beforeAll(async () => {
     connection = await createConnection('test-connection');
-    await connection.query('DROP TABLE IF EXISTS ordersProducts');
+    await connection.query('DROP TABLE IF EXISTS "ordersProducts"');
     await connection.query('DROP TABLE IF EXISTS orders');
     await connection.query('DROP TABLE IF EXISTS products');
     await connection.query('DROP TABLE IF EXISTS customers');
@@ -18,7 +18,7 @@ describe('App', () => {
   });
 
   beforeEach(async () => {
-    await connection.query('DELETE FROM ordersProducts');
+    await connection.query('DELETE FROM "ordersProducts"');
     await connection.query('DELETE FROM orders');
     await connection.query('DELETE FROM products');
     await connection.query('DELETE FROM customers');
