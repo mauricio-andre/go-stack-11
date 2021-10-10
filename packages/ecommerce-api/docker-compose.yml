@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: ecommerceapi_postgres
+    image: postgres
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: "ecommerceapi"
+      POSTGRES_PASSWORD: "ecommerceapi"
+      POSTGRES_DB: "ecommerceapi"
