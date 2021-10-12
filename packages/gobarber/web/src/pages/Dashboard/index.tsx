@@ -4,6 +4,7 @@ import { isToday, format, parseISO, isAfter } from 'date-fns';
 import ptBr from 'date-fns/locale/pt-BR';
 import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Header,
@@ -46,7 +47,7 @@ const Dashboard: React.FC = () => {
   >([]);
 
   const handleDateChange = useCallback((day: Date, modifiers: DayModifiers) => {
-    if (modifiers.available && modifiers.disabled) {
+    if (modifiers.available && !modifiers.disabled) {
       setSelectedDate(day);
     }
   }, []);
@@ -136,7 +137,9 @@ const Dashboard: React.FC = () => {
 
             <div>
               <span>Bem vindo</span>
-              <strong>{user.name}</strong>
+              <Link to="/profile">
+                <strong>{user.name}</strong>
+              </Link>
             </div>
           </Profile>
 
