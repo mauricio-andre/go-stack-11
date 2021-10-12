@@ -16,6 +16,8 @@ interface ProfileFromData {
   name: string;
   email: string;
   password: string;
+  oldPassword: string;
+  passwordConfirmation: string;
 }
 
 const Profile: React.FC = () => {
@@ -34,17 +36,48 @@ const Profile: React.FC = () => {
           email: Yup.string()
             .required('Email obrigatório')
             .email('Digite um e-mail válido'),
-          password: Yup.string().min(6, 'No mínimo 6 dígitos'),
+          oldPassword: Yup.string(),
+          password: Yup.string().when('oldPassword', {
+            is: (val: string) => !!val.length,
+            then: Yup.string().required('Campo obrigatório'),
+          }),
+          passwordConfirmation: Yup.string()
+            .when('oldPassword', {
+              is: (val: string) => !!val.length,
+              then: Yup.string().required('Campo obrigatório'),
+            })
+            .oneOf(
+              [Yup.ref('password'), null],
+              'Confirmação de senha incorreta',
+            ),
         });
 
         await schema.validate(data, { abortEarly: false });
 
-        await api.post('users', data);
+        const { name, email, password, oldPassword, passwordConfirmation } =
+          data;
+
+        const formData = {
+          name,
+          email,
+          ...(oldPassword
+            ? {
+                oldPassword,
+                password,
+                passwordConfirmation,
+              }
+            : {}),
+        };
+
+        const response = await api.put('profile', formData);
+
+        updateUser(response.data);
 
         addToast({
           type: 'success',
-          title: 'Cadastro realizado',
-          description: 'Você já pode fazer se logon no GoBarber',
+          title: 'Perfil atualizado',
+          description:
+            'Suas informações do perfil foram atualizadas com sucesso!',
         });
 
         history.push('/');
@@ -57,8 +90,8 @@ const Profile: React.FC = () => {
 
         addToast({
           type: 'error',
-          title: 'Erro no cadastro',
-          description: 'Ocorreu um erro ao fazer o cadastro, tente novamente',
+          title: 'Erro na atualização',
+          description: 'Ocorreu um erro ao atualizar o perfil, tente novamente',
         });
       }
     },
@@ -130,9 +163,9 @@ const Profile: React.FC = () => {
           />
 
           <Input
-            type="passwordConfirmation"
+            type="password"
             icon={FiLock}
-            name="password"
+            name="passwordConfirmation"
             placeholder="Confirmar Senha"
           />
 
