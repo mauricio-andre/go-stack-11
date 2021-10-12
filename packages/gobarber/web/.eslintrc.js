@@ -22,6 +22,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/jsx-no-bind': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-duplicates': 'off',
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
     'prettier/prettier': 'error',
