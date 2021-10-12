@@ -13,6 +13,7 @@
 
 ## Lista de correspondências
 * Modulo 08: Iniciando front-end web
+* Modulo 13: Finalizando front-end web do app
 
 ## Sobre o projeto
 Está descrição será preenchida ao final da elaboração deste projeto que agrega diversos módulos.

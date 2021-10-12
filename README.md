@@ -42,6 +42,7 @@ Abaixo estão listados os nomes de todos os projetos, uma breve descrição sobr
 * [gomarketplace](./packages/gomarketplace) Aplicativo mobile de marketplace para listar e incluir itens em um carrinho de comprar.
 * [github-explorer:](./packages/github-explorer) Apresenta um tela com layout agradável para pesquisar repositórios do gihub e listar suas issues.
 * [ecommerce-api](./packages/ecommerce-api) Api com rotas de uma aplicação de e-commerce.
+* [gorestaurant](./packages/gorestaurant) Aplicação web e mobile para pedidos de um restaurante.
 
 <br />
 
