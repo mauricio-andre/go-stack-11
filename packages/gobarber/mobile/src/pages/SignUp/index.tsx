@@ -21,7 +21,7 @@ import { MyNavigationProps } from '../../@types/MyNavigationProps';
 import getValidationsErrors from '../../utils/getValidationsErrors';
 import api from '../../services/api';
 
-interface SigUpFormData {
+interface SignUpFormData {
   name: string;
   email: string;
   password: string;
@@ -34,7 +34,7 @@ const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const handleSubmit = useCallback(
-    async (data: SigUpFormData) => {
+    async (data: SignUpFormData) => {
       try {
         formRef.current?.setErrors({});
 
@@ -79,10 +79,7 @@ const SignUp: React.FC = () => {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         enabled
       >
-        <ScrollView
-          keyboardShouldPersistTaps="handled"
-          contentContainerStyle={{ flex: 1 }}
-        >
+        <ScrollView keyboardShouldPersistTaps="handled">
           <Container>
             <Image source={logoImg} />
 
