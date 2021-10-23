@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   extends: [
