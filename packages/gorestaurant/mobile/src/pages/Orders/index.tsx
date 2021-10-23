@@ -16,21 +16,44 @@ import {
   FoodPricing,
 } from './styles';
 
-interface Food {
+interface Extra {
+  value: number;
+  quantity: number;
+}
+
+interface Order {
   id: number;
   name: string;
   description: string;
   price: number;
+  quantity: number;
   formattedPrice: string;
   thumbnail_url: string;
+  extras: Extra[];
 }
 
 const Orders: React.FC = () => {
-  const [orders, setOrders] = useState<Food[]>([]);
+  const [orders, setOrders] = useState<Order[]>([]);
 
   useEffect(() => {
     async function loadOrders(): Promise<void> {
-      // Load orders from API
+      const response = await api.get<Order[]>('/orders');
+
+      const ordersList = response.data.map(order => {
+        const totalFood = order.quantity * order.price;
+        const totalExtra = order.extras.reduce((previous, current) => {
+          return previous + current.quantity * current.value;
+        }, 0);
+
+        const total = totalFood + totalExtra;
+
+        return {
+          ...order,
+          formattedPrice: formatValue(total),
+        };
+      });
+
+      setOrders(ordersList);
     }
 
     loadOrders();
