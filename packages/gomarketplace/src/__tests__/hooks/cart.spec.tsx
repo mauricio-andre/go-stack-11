@@ -141,7 +141,7 @@ describe('Cart Context', () => {
             {
               id: '1234',
               title: 'Test product',
-              image_url: 'test',
+              imageUrl: 'test',
               price: 1000,
               quantity: 0,
             },
