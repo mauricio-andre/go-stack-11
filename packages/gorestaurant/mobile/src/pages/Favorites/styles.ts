@@ -6,7 +6,7 @@ interface Food {
   name: string;
   description: string;
   price: number;
-  thumbnail_url: string;
+  thumbnailUrl: string;
   formattedPrice: string;
 }
 

@@ -30,14 +30,14 @@ interface Food {
   name: string;
   description: string;
   price: number;
-  thumbnail_url: string;
+  thumbnailUrl: string;
   formattedPrice: string;
 }
 
 interface Category {
   id: number;
   title: string;
-  image_url: string;
+  imageUrl: string;
 }
 
 const Dashboard: React.FC = () => {
@@ -136,7 +136,7 @@ const Dashboard: React.FC = () => {
               >
                 <Image
                   style={{ width: 56, height: 56 }}
-                  source={{ uri: category.image_url }}
+                  source={{ uri: category.imageUrl }}
                 />
 
                 <CategoryItemTitle>{category.title}</CategoryItemTitle>
@@ -159,7 +159,7 @@ const Dashboard: React.FC = () => {
                 <FoodImageContainer>
                   <Image
                     style={{ width: 88, height: 88 }}
-                    source={{ uri: food.thumbnail_url }}
+                    source={{ uri: food.thumbnailUrl }}
                   />
                 </FoodImageContainer>
 

@@ -52,9 +52,9 @@ describe('Orders', () => {
           'Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.',
         price: '21.90',
         category: 2,
-        image_url:
+        imageUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png',
-        thumbnail_url:
+        thumbnailUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/veggie.png',
       },
     ];
@@ -68,9 +68,9 @@ describe('Orders', () => {
         'Macarrão ao molho branco, fughi e cheiro verde das montanhas.',
       price: 19.9,
       category: 1,
-      image_url:
+      imageUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png',
-      thumbnail_url:
+      thumbnailUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/ao_molho.png',
       extras: [
         {
@@ -116,9 +116,9 @@ describe('Orders', () => {
           'Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.',
         price: '21.90',
         category: 2,
-        image_url:
+        imageUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png',
-        thumbnail_url:
+        thumbnailUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/veggie.png',
       },
     ];
@@ -132,9 +132,9 @@ describe('Orders', () => {
         'Macarrão ao molho branco, fughi e cheiro verde das montanhas.',
       price: 19.9,
       category: 1,
-      image_url:
+      imageUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png',
-      thumbnail_url:
+      thumbnailUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/ao_molho.png',
       extras: [
         {
@@ -186,9 +186,9 @@ describe('Orders', () => {
           'Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.',
         price: '21.90',
         category: 2,
-        image_url:
+        imageUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png',
-        thumbnail_url:
+        thumbnailUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/veggie.png',
       },
     ];
@@ -202,9 +202,9 @@ describe('Orders', () => {
         'Macarrão ao molho branco, fughi e cheiro verde das montanhas.',
       price: 19.9,
       category: 1,
-      image_url:
+      imageUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png',
-      thumbnail_url:
+      thumbnailUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/ao_molho.png',
       extras: [
         {
@@ -274,9 +274,9 @@ describe('Orders', () => {
           'Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.',
         price: '21.90',
         category: 2,
-        image_url:
+        imageUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png',
-        thumbnail_url:
+        thumbnailUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/veggie.png',
       },
     ];
@@ -290,9 +290,9 @@ describe('Orders', () => {
         'Macarrão ao molho branco, fughi e cheiro verde das montanhas.',
       price: 19.9,
       category: 1,
-      image_url:
+      imageUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png',
-      thumbnail_url:
+      thumbnailUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/ao_molho.png',
       extras: [
         {
@@ -355,9 +355,9 @@ describe('Orders', () => {
           'Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.',
         price: '21.90',
         category: 2,
-        image_url:
+        imageUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png',
-        thumbnail_url:
+        thumbnailUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/veggie.png',
       },
     ];
@@ -371,9 +371,9 @@ describe('Orders', () => {
         'Macarrão ao molho branco, fughi e cheiro verde das montanhas.',
       price: 19.9,
       category: 1,
-      image_url:
+      imageUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png',
-      thumbnail_url:
+      thumbnailUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/ao_molho.png',
       extras: [
         {
@@ -431,9 +431,9 @@ describe('Orders', () => {
           'Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.',
         price: '21.90',
         category: 2,
-        image_url:
+        imageUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png',
-        thumbnail_url:
+        thumbnailUrl:
           'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/veggie.png',
       },
     ];
@@ -447,9 +447,9 @@ describe('Orders', () => {
         'Macarrão ao molho branco, fughi e cheiro verde das montanhas.',
       price: 19.9,
       category: 1,
-      image_url:
+      imageUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png',
-      thumbnail_url:
+      thumbnailUrl:
         'https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-gorestaurant-mobile/ao_molho.png',
       extras: [
         {

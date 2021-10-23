@@ -53,8 +53,8 @@ interface Food {
   description: string;
   price: number;
   category: number;
-  thumbnail_url: string;
-  image_url: string;
+  thumbnailUrl: string;
+  imageUrl: string;
   formattedPrice: string;
   extras: Extra[];
 }
@@ -130,8 +130,8 @@ const FoodDetails: React.FC = () => {
         description: food.description,
         price: food.price,
         category: food.category,
-        image_url: food.image_url,
-        thumbnail_url: food.thumbnail_url,
+        imageUrl: food.imageUrl,
+        thumbnailUrl: food.thumbnailUrl,
       };
 
       await api.post(`/favorites`, favoriteFood);
@@ -160,7 +160,7 @@ const FoodDetails: React.FC = () => {
       description: food.description,
       price: food.price,
       category: food.category,
-      thumbnail_url: food.thumbnail_url,
+      thumbnailUrl: food.thumbnailUrl,
       quantity: foodQuantity,
       extras,
     });
@@ -199,7 +199,7 @@ const FoodDetails: React.FC = () => {
               <Image
                 style={{ width: 327, height: 183 }}
                 source={{
-                  uri: food.image_url,
+                  uri: food.imageUrl,
                 }}
               />
             </FoodImageContainer>

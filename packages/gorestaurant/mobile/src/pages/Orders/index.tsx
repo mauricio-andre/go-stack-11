@@ -28,7 +28,7 @@ interface Order {
   price: number;
   quantity: number;
   formattedPrice: string;
-  thumbnail_url: string;
+  thumbnailUrl: string;
   extras: Extra[];
 }
 
@@ -74,7 +74,7 @@ const Orders: React.FC = () => {
               <FoodImageContainer>
                 <Image
                   style={{ width: 88, height: 88 }}
-                  source={{ uri: item.thumbnail_url }}
+                  source={{ uri: item.thumbnailUrl }}
                 />
               </FoodImageContainer>
 

@@ -21,7 +21,7 @@ interface Food {
   name: string;
   description: string;
   price: number;
-  thumbnail_url: string;
+  thumbnailUrl: string;
   formattedPrice: string;
 }
 
@@ -58,7 +58,7 @@ const Favorites: React.FC = () => {
               <FoodImageContainer>
                 <Image
                   style={{ width: 88, height: 88 }}
-                  source={{ uri: item.thumbnail_url }}
+                  source={{ uri: item.thumbnailUrl }}
                 />
               </FoodImageContainer>
 
