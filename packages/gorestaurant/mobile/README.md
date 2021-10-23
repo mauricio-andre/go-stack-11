@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/logo.png" alt="GoMarketplace" />
+  GORESTAURANT
 </h1>
 
 <p align="center">
@@ -12,19 +12,10 @@
 <br />
 
 ## Lista de correspondências
-* [Desafio 08: Fundamentos do React Native](./_instruction/Desafio08.md)
+* [Desafio 11: GoRestaurant Mobile](./_instruction/Desafio11.md)
 
 ## Sobre o projeto
-Este projeto corresponde a um modelo simples de marketplace, nele é apresentado uma lista de produtos que podem ser incluídos em uma carrinho de compra conforme imagem abaixo.
-
-<img src="./assets/listagem.png" width="300px" style="max-width: 100%" alt="Listagem de itens" />
-
-<br/><br/>
-
-O sistema conta com uma tela onde é possível visualizar todos os itens adicionados ao carrinho, nessa tela é possível também alterar a quantidade dos itens adicionados.
-
-<img src="./assets/carrinho.png" width="300px" style="max-width: 100%" alt="Listagem de itens" />
-
+Após a criação do projeto GoRestaurant construido para a Web, chegou a hora de desenvolver uma versão mobile deste mesmo sistema. Este projeto conta com uma tela de listagem dos pratos cadastrados, a consulta dos detalhes de cada prato com as funcionalidades de acrescentar itens extras ao seu prato antes de finalizar a compra, também é possível adicionar pratos a uma listagem de favoritos e visualizar o histórico de compras realizada.
 
 
 ## Execução

@@ -13,6 +13,7 @@
 
 ## Lista de correspondências
 * Modulo 09: Iniciando aplicativo mobile
+* Modulo 14: Finalizando front-end mobile do app
 
 ## Sobre o projeto
 Está descrição será preenchida ao final da elaboração deste projeto que agrega diversos módulos.
