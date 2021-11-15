@@ -31,3 +31,6 @@ Para executar este projeto acesse o diretório do mesmo por meio do terminal e e
 - `yarn install`
 - `yarn typeorm migration:run`
 - `yarn dev:server`
+
+
+Ao gerar o build do projeto, é necessário alterar o ormconfig para apontar para a pasta dist e usar o arquivo .js
